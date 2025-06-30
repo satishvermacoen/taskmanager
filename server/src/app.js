@@ -1,0 +1,33 @@
+import express from "express";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+
+const app = express();
+
+const port = process.env.PORT
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
+
+app.use(cors({
+  origin : process.env.CORS_ORIGIN,
+  Credentials : true
+}));
+
+app.use(express.json({limit : "16kb"}));
+app.use(express.urlencoded({extended: true, limit: "16kb"}));
+app.use(express.static("public"));
+app.use(cookieParser())
+
+// Routes import
+import authRouter from "./routes/authuser.routes.js";
+import usersrouter from "./routes/user.routes.js";
+
+app.use("/api/auth", authRouter);
+app.use("/api/users", usersrouter);
+
+
+
+export { app }
