@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { adminOnly, verifyJWT } from "../middlewares/auth.middlewares";
+import { adminOnly, verifyJWT } from "../middlewares/auth.middlewares.js";
 import { getDashboardData, getTaskById, getTasks, createTask, updateTask, deleteTask, updateTaskStatus, updateTaskChecklist, getUserDashboardData } from "../controllers/task.controllers.js";
 
 const router = Router()

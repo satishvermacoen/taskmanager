@@ -1,1 +1,1 @@
-export const DB_NAME = "taskmanagernew";
+export const DB_NAME = "taskmanager-db";

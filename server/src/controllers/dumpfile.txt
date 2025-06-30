@@ -1,0 +1,12 @@
+{
+    "title": "Improve webiste performance",
+    "description": "optimize the webiste performance for better user experience.",
+    "priority": "low",
+    "dueDate": "2025-07-09T00:00:00.000Z",
+    "assignedTo": [""],
+    "todoChecklist": [
+        {"text": "Implement lazy", "completed": false },
+        {"text": "Implement fast", "completed": false },
+        {"text": "Implement slow", "completed": false }
+    ]
+}

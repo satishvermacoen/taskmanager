@@ -31,7 +31,7 @@ const createTask = async (req, res) => {
         } = req.body
 
         if (!Array.isArray(assignedTo)) {
-            return res.status(400).json({message: " assingedto must be an array of user IDs"})
+            return res.status(400).json({message: " assinged to must be an array of user IDs"})
         }
         
         const task = await Task.create({
@@ -48,7 +48,7 @@ const createTask = async (req, res) => {
         res.status(201).json({ message: " Task created successfully", task })
 
     } catch (error) {
-        res.status(500).json({ message: "Server error", error: error.message })
+        res.status(500).json({ message: "Server hello error", error: error.message })
     }
 };
 
