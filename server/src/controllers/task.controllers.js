@@ -26,10 +26,10 @@ const getTasks = async (req, res) => {
          );
       }
       tasks = await Promise.all(
-         tasks.map[async (task) => {
+         tasks.map(async (task) => {
             const completedCount = task.todoChecklist.filter((item) => item.completed).length;
-            return { ...task.doc, completedTodoCount: completedCount }
-         }]
+            return { ...task._doc, completedTodoCount: completedCount }
+         })
       );
 
       //  Status Summary Counts
@@ -71,7 +71,16 @@ const getTasks = async (req, res) => {
 };
 
 const getTaskById = async (req, res) => {
-    try {
+   try {
+      const task = await Task.findById(req.params.id).populate(
+         "assignedTo",
+         "name email profileIamgeUrl"
+
+      )
+      if (!task) {return res.status(404).json({message: "Task not found"})
+         
+      }
+      res.json(task)
     
  } catch (error) {
     res.status(500).json({ message: "Server error", error: error.message })
