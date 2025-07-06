@@ -1,11 +1,10 @@
 import React from 'react'
+import AuthLayout from '../../components/layouts/AuthLayout.jsx'
 
 const Login = () => {
-  return (
-    <div>
-     Login
-    </div>
-  )
-}
+  return <AuthLayout> Login </AuthLayout>
 
-export default Login
+
+};
+
+export default Login;

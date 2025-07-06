@@ -26,3 +26,4 @@ dist-ssr
 client/.env
 api/.env
 server/image/*
+taskmanager

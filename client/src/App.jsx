@@ -12,7 +12,6 @@ import MyTask from './pages/User/MyTask';
 
 function App() {
   return (
-    <div>
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
@@ -36,7 +35,7 @@ function App() {
 
       </Routes>
     </Router>
-    </div>
+    
   )
 }
 
