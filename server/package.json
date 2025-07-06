@@ -1,7 +1,7 @@
 {
-  "name": "gym-backend-main",
+  "name": "TaskManager-backend",
   "version": "1.0.0",
-  "description": "gym ERP main backend source code dev_1",
+  "description": "TaskManager backend source code dev_1",
   "keywords": [
     "javascript"
   ],
@@ -24,6 +24,7 @@
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
+    "exceljs": "^4.4.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.16.0",

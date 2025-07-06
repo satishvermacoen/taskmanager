@@ -25,10 +25,12 @@ app.use(cookieParser())
 import authRouter from "./routes/authuser.routes.js";
 import usersRouter from "./routes/user.routes.js";
 import taskRouter from "./routes/task.routes.js";
+import reportRoutes from "./routes/report.routes.js";
 
 app.use("/api/auth", authRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/tasks", taskRouter);
+app.use("/api/reports", reportRoutes)
 
 
 
